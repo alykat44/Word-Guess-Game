@@ -17,7 +17,7 @@ Main.Word = Words.List[(Math.floor(Math.random()*Main.NumInWordBank))];
 
 Main.SetUnderLine = function () {
   Main.PullWord ();
-  for(i=o; i<Main.Word.length; i++){
+  for(i=o; i<Main.Word.length; i++) {
   Main.WordArray[i] = Main.Word.charAt (i);
   Main.WordArray[i] = "_";
   }
@@ -43,21 +43,21 @@ Main.UpdateLetter = function(letter) {
     document.getElementById("lives").innerHTML = Main.Lives;
 
     }
-  Main.WordU = Main.WordArray.join("");
+  Main.WordU = Main.WordUArray.join("");
   document.getElementById("WORD").innerHTML = Main.WordU;
 
   Main.Word1 = Main.WordArray.join("");
   Main.Word2 = Main.WordUArray.join("");
 
   if (Main.Word1 == Main.Word2) {
-    alert("You Win!!! Here comes the next word!!");
+    alert("You Win!!! Here comes the next Word!!");
     window.location.reload();
 
   }
  
   if (Main.Lives < 1){
     document.getElementById("WORD").innerHTML == Main.Word;
-    alert("No More Lives, Please Try Again!");
+    alert("YOUR DEAD!!- Please Try Again!");
     window.location.reload();
   }
 
