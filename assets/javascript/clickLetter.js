@@ -1,6 +1,9 @@
 $(function(){
 	$("#a").click(function(event) {
 			event.preventDefault();
+
+			console.log("working");
+			
 			Main.UpdateLetter("a");
 	});
 	}

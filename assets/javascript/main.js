@@ -11,15 +11,16 @@ Main.WordU = "";
 // Functions...
 
 Main.PullWord = function(){
-Main.Word = Words.List[(Math.floor(Math.random()*Main.NumInWordBank))];
+Main.Word = Words.List[(Math.floor(Math.random()* Main.NumInWordBank))];
 
 }
 
 Main.SetUnderLine = function () {
   Main.PullWord ();
   for(i=o; i<Main.Word.length; i++) {
+    console.log(Main.Word.charAt (i))
   Main.WordArray[i] = Main.Word.charAt (i);
-  Main.WordArray[i] = "_";
+  Main.WordUArray[i] = "_";
   }
   Main.WordU = Main.WordUArray.join("");
   document.getElementById("WORD").innerHTML = Main.WordU;
@@ -49,11 +50,13 @@ Main.UpdateLetter = function(letter) {
   Main.Word1 = Main.WordArray.join("");
   Main.Word2 = Main.WordUArray.join("");
 
-  if (Main.Word1 == Main.Word2) {
+  console.log(Main.Word1, Main.Word2);
+
+  if (Main.Word1 === Main.Word2) {
     alert("You Win!!! Here comes the next Word!!");
     window.location.reload();
-
-  }
+    }
+  
  
   if (Main.Lives < 1){
     document.getElementById("WORD").innerHTML == Main.Word;
